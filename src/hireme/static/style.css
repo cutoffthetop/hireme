@@ -1,0 +1,25 @@
+.container {
+    max-width: 560px;
+    margin: auto;
+}
+.nav-bar {
+    padding: 0px;
+}
+.nav-item {
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+}
+.nav-item.active a, .nav-item a:hover {
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+
+}
+a:visited {
+    color: #000;
+}
+.submit-button {
+    margin-top: 10px;
+}

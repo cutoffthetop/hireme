@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block task %}
+<form action="/{{ title }}" method="POST">
+  <textarea id="input" cols="80" rows="20" placeholder="Enter input data here">
+  </textarea>
+  <input type="submit" class="submit-button" value="Submit"/>
+</form>
+<div id="solution">
+<pre>
+{{ solution }}
+</pre>
+</div>
+{% endblock %}
