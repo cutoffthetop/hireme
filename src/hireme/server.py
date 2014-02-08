@@ -18,4 +18,5 @@ def app_factory():
 
 def run_local(*args, **kwargs):
     app = app_factory()
+    app.debug = True
     app.run()
