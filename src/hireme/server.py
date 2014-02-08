@@ -11,8 +11,8 @@ def index():
 def app_factory():
     app = flask.Flask(import_name=__package__)
     app.add_url_rule('/', 'index', index)
-    app.add_url_rule('/task1', 'task1', task1.solve)
-    app.add_url_rule('/task2', 'task2', task2.solve)
+    app.add_url_rule('/task1', 'task1', task1.solve, methods=['GET', 'POST'])
+    app.add_url_rule('/task2', 'task2', task2.solve, methods=['GET', 'POST'])
     return app
 
 
