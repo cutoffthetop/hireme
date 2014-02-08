@@ -2,8 +2,8 @@
 
 {% block task %}
 <form action="/{{ title }}" method="POST">
-  <textarea id="input" cols="80" rows="20" placeholder="Enter input data here">
-  </textarea>
+  <textarea id="input" name="input" cols="80" rows="20"
+    placeholder="Enter your input data here.">{{ input }}</textarea>
   <input type="submit" class="submit-button" value="Submit"/>
 </form>
 <div id="solution">
