@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import re
-import itertools
 
 from flask import request
 from werkzeug import exceptions
+# TODO: Add numpy to buildout.cfg
+import numpy as np
 
 from . import render_task
 
@@ -14,7 +15,7 @@ def solve():
     input_data = request.form.get('input')
     method = request.method
     title = 'task1'
-    fallback = 'KEIN ABSCHNITT GEFUNDEN'
+
     if method == 'GET':
         return dict(
             title=title
@@ -46,20 +47,15 @@ def solve():
             description='Expected %s words, got %s.' % (word_count, len(query))
             )
 
-    # TODO: Add numpy to buildout.cfg
-    import numpy as np
     text_num = np.array([tokens.index(i) for i in text_split])
 
     # TODO: Fallback if not all tokens are found.
-
-    # Sort query words by number of occurance.
-    sort_key = lambda x: text_num[text_num==x].shape[0]
-    query_num = sorted([tokens.index(i) for i in query], key=sort_key)
+    # fallback = 'KEIN ABSCHNITT GEFUNDEN'
 
     occurances = dict()
     for i in query:
         index = tokens.index(i)
-        occurance = np.where(text_num==index)[0].tolist()
+        occurance = np.where(text_num == index)[0].tolist()
         occurances[index] = occurance
 
     global SHORTEST, PATH
