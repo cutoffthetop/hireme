@@ -9,9 +9,9 @@ hireme_install()
     /usr/local/hireme/bin/buildout
 }
 
-read -p "You are about to install hireme. Continue? " yn
+read -p "You are about to install hireme. Are you sure? " yn
 case $yn in
-    [Yy]* ) hireme_install "$@";;
-    [Nn]* ) exit;;
-    * ) echo "Please answer yes or no.";;
+    (Y|y|yes) hireme_install;;
+    (N|n|no) exit;;
+    (*) echo "Please answer yes or no.";;
 esac
