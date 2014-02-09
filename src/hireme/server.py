@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 
-from tasks import task1, task2
 import flask
 
+from tasks import task1, task2
 
-def index():
+
+def render_index():
     return flask.render_template('index.html', title='index')
 
 
 def app_factory():
     app = flask.Flask(import_name=__package__)
-    app.add_url_rule('/', 'index', index)
+    app.add_url_rule('/', 'index', render_index)
     app.add_url_rule('/task1', 'task1', task1.solve, methods=['GET', 'POST'])
     app.add_url_rule('/task2', 'task2', task2.solve, methods=['GET', 'POST'])
     return app

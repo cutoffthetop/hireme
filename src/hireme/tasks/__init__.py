@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
-import flask
+from flask import render_template
+from flask import request
 
 
 def render_task(func):
     def rendered():
-        params = func()
-        if not isinstance(params, dict):
-            raise TypeError('Tasks must return data of type dict.')
-        return flask.render_template('task.html', **params)
+        params = dict(title=func.__module__.split('.')[-1] or '')
+        if request.method == 'POST':
+            input_data = request.form.get('input')
+            params['input_data'] = input_data
+            params['solution'] = func(input_data)
+        return render_template('task.html', **params)
+
     return rendered
