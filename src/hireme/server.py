@@ -2,18 +2,14 @@
 
 import flask
 
-from tasks import task1, task2
-
-
-def render_index():
-    """Render the index page template."""
-    return flask.render_template('index.html', title='index')
+from . import rendering
+from . import task1, task2
 
 
 def app_factory():
     """Create a new Flask instance and configure the URL map."""
     app = flask.Flask(import_name=__package__)
-    app.add_url_rule('/', 'index', render_index)
+    app.add_url_rule('/', 'index', rendering.render_index)
     app.add_url_rule('/task1', 'task1', task1.solve, methods=['GET', 'POST'])
     app.add_url_rule('/task2', 'task2', task2.solve, methods=['GET', 'POST'])
     return app

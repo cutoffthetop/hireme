@@ -5,7 +5,7 @@ import re
 from werkzeug.exceptions import BadRequest
 import numpy as np
 
-from . import render_task
+from .rendering import render_task
 
 
 @render_task

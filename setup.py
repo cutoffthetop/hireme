@@ -9,7 +9,6 @@ setup(
     author_email='drebenstedt@me.com',
     license='BSD',
     platforms='any',
-    test_suite='hireme.tests',
     zip_safe=False,
     include_package_data=True,
     package_dir={'': 'src'},
