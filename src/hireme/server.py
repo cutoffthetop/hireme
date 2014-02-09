@@ -6,7 +6,7 @@ from . import rendering
 from . import task1, task2
 
 
-def app_factory():
+def app_factory(*args, **kwargs):
     """Create a new Flask instance and configure the URL map."""
     app = flask.Flask(import_name=__package__)
     app.add_url_rule('/', 'index', rendering.render_index)
