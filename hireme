@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+
+    ServerName localhost
+    ServerAdmin webmaster@localhost
+
+    WSGIScriptAlias /myapp /usr/local/hireme/hireme.wsgi
+
+    <Directory /usr/local/hireme>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+</VirtualHost>
