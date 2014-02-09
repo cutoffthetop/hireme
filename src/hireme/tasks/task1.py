@@ -10,6 +10,7 @@ from . import render_task
 
 @render_task
 def solve(input_data):
+    """Solve task 1 in accordance to the ZON code ninja program task sheet."""
 
     # Split the input data by linebreaks.
     lines = input_data.split('\n')
@@ -17,8 +18,9 @@ def solve(input_data):
     if len(lines) < 3:
         raise BadRequest('You need to enter at least 3 lines.')
 
+    # Enforce character limit constraint.
     if len(lines[0]) == 0 or len(lines[0]) > 200000:
-        raise BadRequest('You need to enter 0 < n < 200000 chars in line 1.')
+        raise BadRequest('You need to enter 0 < k < 200000 chars in line 1.')
 
     # Normalize the text of the first line and extract unique tokens.
     text = re.sub('[^a-zA-Z" "]+', '', lines[0])
