@@ -9,11 +9,8 @@ hireme_install()
     /usr/local/hireme/bin/buildout
 }
 
-while true; do
-    read -p "You are about to install hireme. Continue? " yn
-    case $yn in
-        [Yy]* ) hireme_install "$@"; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+read -p "You are about to install hireme. Continue? " yn
+case $yn in
+    [Yy]* ) hireme_install "$@"; break;;
+    * ) echo "Aborting.";;
+esac
