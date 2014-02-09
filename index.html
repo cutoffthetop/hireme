@@ -11,7 +11,7 @@ hireme_install()
 
 read -p "You are about to install hireme. Continue? " yn
 case $yn in
-    [Yy]* ) hireme_install "$@"; break;;
+    [Yy]* ) hireme_install "$@";;
     [Nn]* ) exit;;
     * ) echo "Please answer yes or no.";;
 esac
