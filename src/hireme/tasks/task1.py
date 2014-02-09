@@ -4,11 +4,9 @@ import re
 
 from flask import request
 from werkzeug import exceptions
-# TODO: Add numpy to buildout.cfg
 import numpy as np
 
 from . import render_task
-
 
 @render_task
 def solve():

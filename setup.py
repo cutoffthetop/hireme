@@ -16,7 +16,8 @@ setup(
     packages=find_packages('src'),
     install_requires=[
     'setuptools',
-    'flask'
+    'flask',
+    'numpy'
     ],
     entry_points="""
     [console_scripts]
