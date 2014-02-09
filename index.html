@@ -2,7 +2,18 @@
 
 hireme_install()
 {
-  printf "Hello World."
+    apt-get update
+    apt-get install apache2 libapache2-mod-wsgi git
+    git clone https://github.com/cutoffthetop/hireme.git /usr/local/hireme
+    python /usr/local/hireme/bootstrap.py
+    /usr/local/hireme/bin/buildout
 }
 
-hireme_install "$@"
+while true; do
+    read -p "You are about to install hireme. Continue? " yn
+    case $yn in
+        [Yy]* ) hireme_install "$@"; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
