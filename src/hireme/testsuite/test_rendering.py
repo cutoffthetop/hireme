@@ -11,7 +11,7 @@ from ..rendering import render_task
 from ..server import app_factory
 
 
-def setup_func():    
+def setup_func():
     app = app_factory()
     app_ctx = flask.ctx.AppContext(app)
     app_ctx.push()

@@ -71,8 +71,9 @@ def solve(input_data):
             # Every cluster gets an ID, which is stored in the matrix instead
             # of the value 1. Therefore, we loop until there are only zeroes
             # and cluster IDs left.
+
             def expand(resident, cluster_id):
-                matrix[resident] = cluster_id #counts[case]
+                matrix[resident] = cluster_id
                 hood = neighbours(resident, cluster_id)
                 if hood:
                     for neighbour in hood:
