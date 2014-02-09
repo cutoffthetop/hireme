@@ -16,10 +16,12 @@ setup(
     install_requires=[
     'setuptools',
     'flask',
-    'numpy'
+    'numpy',
+    'nose'
     ],
     entry_points="""
     [console_scripts]
     hireme = hireme.server:run_local
+    tests = hireme.testsuite:main
     """
 )
