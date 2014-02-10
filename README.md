@@ -33,10 +33,9 @@ To run the server locally, use this command.
 
     bin/hireme
 
-To run the testsuite, you first need to install nosetest.
+To run the test suite with verbose output, use this command.
 
-    pip install nose
-    nosetests
+    bin/tests -v
 
 ##deployment
 
