@@ -13,7 +13,8 @@ def solve(input_data):
     """Solve task 2 in accordance to the ZON code ninja program task sheet."""
 
     # Clean input data and split by linebreaks.
-    lines = [re.sub('[^0-9]+', '', i) for i in input_data.split('\n')]
+    input_split = input_data.split('\n')
+    lines = [re.sub('[^0-9]+', '', i) for i in input_split if len(i)]
 
     # Determine number of test cases and init solution list.
     cases = int(0 if not lines else lines.pop(0))
@@ -40,8 +41,8 @@ def solve(input_data):
         cluster_ids = []
 
         if not matrix.shape == (dimension,) * 2:
-            raise BadRequest('Expected %s-D matrix for case %s, got %s.' %
-                             (dimension, case + 1, matrix.shape))
+            raise BadRequest('Expected uniform %s-D matrix for case %s.' %
+                             (dimension, case + 1))
 
         def neighbours(idx, cluster_id):
             # Return all 1s in the up to 8 fields adjacent to idx.
