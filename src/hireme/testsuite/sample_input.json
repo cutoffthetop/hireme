@@ -1,0 +1,50 @@
+{
+    "task1": {
+        "input_lines": [
+            "Ein toller Beispieltext ist der Blindtext. Er hat ein paar Wörter. Dies ist ein Beispieltext, der ein paar Wörter hat und auch noch ein paar mehr, um die Zeile etwas länger zu machen. Darüber hinaus ist er nur dafür da, um genügend Testtext zusammenzubekommen. Dem Text selbst macht das nicht so viel aus. Früher einmal mehr, als er noch nicht so selbstbewusst war. Heute kennt er seine Rolle als Blindtext und fügt sich selbstbewusst ein. Er ist ja irgendwie wichtig. Manchmal jedoch, ganz manchmal, weint er in der Nacht, weil er niemals bis zum Ende gelesen wird. Doch das hat ja jetzt zum Glück ein Ende.",
+            "5",
+            "ein",
+            "Beispieltext",
+            "der",
+            "paar",
+            "Wörter"
+        ],
+        "output_lines": ["Beispieltext der ein paar Wrter"]
+    },
+    "task2": {
+        "input_lines": [
+            "4",
+            "4",
+            "0010",
+            "1010",
+            "0100",
+            "1111",
+            "4",
+            "1001",
+            "0000",
+            "0110",
+            "1001",
+            "5",
+            "10011",
+            "00100",
+            "00000",
+            "11111",
+            "00000",
+            "8",
+            "00100100",
+            "10000001",
+            "00100101",
+            "01000100",
+            "10000000",
+            "00110110",
+            "10110110",
+            "00000000"
+        ],
+        "output_lines": [
+            "1",
+            "3",
+            "3",
+            "9"
+        ]
+    }
+}
