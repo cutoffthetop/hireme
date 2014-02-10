@@ -31,7 +31,7 @@ def solve(input_data):
     try:
         query_len = int(lines[1])
     except ValueError:
-        raise BadRequest('The second paragraph must be an digit.')
+        raise BadRequest('The second line must be an integer.')
 
     query = [re.sub('[^a-zA-Z" "]+', '', i.lower()) for i in lines[2:]]
 
