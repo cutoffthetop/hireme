@@ -6,10 +6,10 @@ Solution to the zon-backend developer code ninja program.
 
 ##automatic install
 
-For new debian based machines, this script will do the trick.    
-No warranties! When in doubt, please follow the manual install method.
+For new debian based machines, this script will do the install automatically.    
+Make sure you understand what it is doing, before executing as root.
 
-    \curl -sL cutoffthetop.github.io/hireme | bash
+    wget -q cutoffthetop.github.io/hireme && bash hireme
 
 ##manual install
 
