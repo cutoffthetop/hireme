@@ -1,6 +1,8 @@
 #hireme
 
-Solution to the ZON backend developer code ninja program.
+[![Build Status](https://travis-ci.org/cutoffthetop/hireme.png?branch=master)](https://travis-ci.org/cutoffthetop/hireme)
+
+Solution to the zon-backend developer code ninja program.
 
 ##automatic install
 
