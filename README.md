@@ -15,7 +15,7 @@ No warranties! When in doubt, please follow the manual install method.
 
 Make sure the following dependencies are installed on your system.
 
-    apache2 mod_wsgi git python
+    apache2 mod_wsgi git python python-dev
 
 Then clone the repository and change to the directory.
 
@@ -41,7 +41,7 @@ To run the test suite with verbose output, use this command.
 
 Copy the virtualhost file, enable it and activate mod_wsgi.
 
-    cp /usr/local/hireme /etc/apache2/site-available
-    a2enmod mod_wsgi
+    cp /usr/local/hireme/hireme /etc/apache2/sites-available
+    a2dissite default 
     a2ensite hireme
     service apache2 restart
