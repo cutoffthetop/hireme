@@ -2,11 +2,9 @@
 
 import nose
 
-from . import test_server
-
 
 def main():
-    nose.main(module=test_server)
+    nose.main()
 
 
 if __name__ == '__main__':

@@ -6,7 +6,6 @@ setup(
     name='hireme',
     version='0.1',
     author='Nicolas Drebenstedt',
-    author_email='drebenstedt@me.com',
     license='BSD',
     platforms='any',
     zip_safe=False,
