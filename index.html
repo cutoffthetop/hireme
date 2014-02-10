@@ -3,10 +3,17 @@
 hireme_install()
 {
     apt-get update
-    apt-get install apache2 libapache2-mod-wsgi git
+    apt-get install apache2 libapache2-mod-wsgi git python python-dev
     git clone https://github.com/cutoffthetop/hireme.git /usr/local/hireme
-    python /usr/local/hireme/bootstrap.py
-    /usr/local/hireme/bin/buildout
+    cd /usr/local/hireme
+    python bootstrap.py
+    bin/buildout
+    cp hireme /etc/apache2/sites-available
+    a2dissite default
+    a2ensite hireme
+    service apache2 restart
+    cd -
+    printf "All done.\n"
 }
 
 read -p "You are about to install hireme. Are you sure? " yn
